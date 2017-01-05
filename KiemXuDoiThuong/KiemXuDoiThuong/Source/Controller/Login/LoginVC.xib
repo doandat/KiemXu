@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="KiemXuDoiThuong" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0A-AA-k20">
+                    <rect key="frame" x="200" y="280" width="200" height="40"/>
+                    <color key="backgroundColor" red="0.10462447776290681" green="0.51659660763573612" blue="0.97521269633507857" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Mox-5z-OoZ"/>
+                        <constraint firstAttribute="width" constant="200" id="nFf-NN-8HR"/>
+                    </constraints>
+                    <state key="normal" title="Đăng nhập bằng Facebook">
+                        <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="actionLoginFacebook:" destination="-1" eventType="touchUpInside" id="8kj-VK-voZ"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdU-gh-Cmj">
+                    <rect key="frame" x="200" y="552" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="8nK-od-uwY"/>
+                        <constraint firstAttribute="height" constant="40" id="EdB-C6-4rf"/>
+                    </constraints>
+                    <state key="normal" title="Bỏ qua đăng nhập">
+                        <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="skipLogin:" destination="-1" eventType="touchUpInside" id="G9E-NX-lj3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.041226947004733679" green="0.79143811259641961" blue="0.88914246160575916" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TdU-gh-Cmj" secondAttribute="bottom" constant="8" id="8tf-ij-1NG"/>
+                <constraint firstItem="u0A-AA-k20" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BP5-pM-aDI"/>
+                <constraint firstItem="TdU-gh-Cmj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b0g-22-Zxb"/>
+                <constraint firstItem="u0A-AA-k20" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dAw-7U-cUZ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

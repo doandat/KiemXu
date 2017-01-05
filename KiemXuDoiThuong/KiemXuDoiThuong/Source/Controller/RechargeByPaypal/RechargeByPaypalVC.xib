@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="GohamBook_Regular.ttf">
+            <string>GothamBook</string>
+            <string>GothamBook</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargeByPaypalVC" customModule="KiemXuDoiThuong" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPayment" destination="bVg-iC-pFB" id="xyc-7a-LQI"/>
+                <outlet property="lbAmountValue" destination="7mb-Pn-0FP" id="hwS-dj-Pc5"/>
+                <outlet property="lbCurrentCoin" destination="btx-0L-BYA" id="q0t-U4-NF2"/>
+                <outlet property="tfPaypalId" destination="XwZ-9I-wpq" id="BCk-st-DMp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAmount" destination="UCE-YR-Zea" id="lIG-so-MKX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-vC-rjo" customClass="TPKeyboardAvoidingScrollView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAb-12-9WX">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Current Coins:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btx-0L-BYA">
+                                    <rect key="frame" x="226" y="50" width="147" height="14"/>
+                                    <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="15"/>
+                                    <color key="textColor" red="0.27450980392156865" green="0.58823529411764708" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XwZ-9I-wpq">
+                                    <rect key="frame" x="134" y="148" width="456" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="G4J-zj-S9j"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paypal Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-o9-CH3">
+                                    <rect key="frame" x="25" y="149" width="89" height="27"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="89" id="ph7-BB-Y5S"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVg-iC-pFB">
+                                    <rect key="frame" x="235" y="293" width="130" height="50"/>
+                                    <color key="backgroundColor" red="0.88235294117647056" green="0.2627450980392157" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="BdK-kQ-9jW"/>
+                                        <constraint firstAttribute="width" constant="130" id="bcL-a7-cH5"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                    <state key="normal" title="Payment">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="actionPayment:" destination="-1" eventType="touchUpInside" id="i0X-17-dC8"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0V8-Cn-OOe">
+                                    <rect key="frame" x="25" y="215" width="78" height="27"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCE-YR-Zea">
+                                    <rect key="frame" x="134" y="209" width="456" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5x-qz-Aqh">
+                                            <rect key="frame" x="421" y="3" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="PCQ-gE-wnl"/>
+                                                <constraint firstAttribute="width" constant="35" id="X7L-6f-Hjd"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                            <state key="normal" image="icon_down_arrow.png"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mb-Pn-0FP">
+                                            <rect key="frame" x="8" y="0.0" width="410" height="40"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="7mb-Pn-0FP" secondAttribute="bottom" id="BD4-3q-Oxf"/>
+                                        <constraint firstItem="7mb-Pn-0FP" firstAttribute="top" secondItem="UCE-YR-Zea" secondAttribute="top" id="HLz-CX-jxQ"/>
+                                        <constraint firstItem="7mb-Pn-0FP" firstAttribute="leading" secondItem="UCE-YR-Zea" secondAttribute="leading" constant="8" id="YAY-Pm-P8V"/>
+                                        <constraint firstAttribute="height" constant="40" id="hTj-kV-XNj"/>
+                                        <constraint firstItem="T5x-qz-Aqh" firstAttribute="leading" secondItem="7mb-Pn-0FP" secondAttribute="trailing" constant="3" id="mB2-5T-INL"/>
+                                        <constraint firstItem="T5x-qz-Aqh" firstAttribute="centerY" secondItem="UCE-YR-Zea" secondAttribute="centerY" id="o4E-Mg-2qQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="T5x-qz-Aqh" secondAttribute="trailing" id="psQ-eg-eLn"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 Rs = 100 Coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDP-Ai-vwp">
+                                    <rect key="frame" x="241" y="94" width="120" height="14"/>
+                                    <fontDescription key="fontDescription" name="GothamBook" family="Gotham Book" pointSize="15"/>
+                                    <color key="textColor" red="0.27450980392156865" green="0.58823529411764708" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="UCE-YR-Zea" firstAttribute="leading" secondItem="XwZ-9I-wpq" secondAttribute="leading" id="1cW-sy-D3b"/>
+                                <constraint firstItem="aDP-Ai-vwp" firstAttribute="centerX" secondItem="AAb-12-9WX" secondAttribute="centerX" id="5zi-uz-nEz"/>
+                                <constraint firstAttribute="trailing" secondItem="XwZ-9I-wpq" secondAttribute="trailing" constant="10" id="8Da-9n-d5O"/>
+                                <constraint firstItem="XwZ-9I-wpq" firstAttribute="leading" secondItem="4WJ-o9-CH3" secondAttribute="trailing" constant="20" id="Af9-e8-rT3"/>
+                                <constraint firstItem="bVg-iC-pFB" firstAttribute="centerX" secondItem="AAb-12-9WX" secondAttribute="centerX" id="Hte-tn-NtY"/>
+                                <constraint firstItem="bVg-iC-pFB" firstAttribute="top" secondItem="UCE-YR-Zea" secondAttribute="bottom" constant="44" id="MdT-rD-Wbz"/>
+                                <constraint firstItem="XwZ-9I-wpq" firstAttribute="centerY" secondItem="4WJ-o9-CH3" secondAttribute="centerY" id="QBY-qq-KtN"/>
+                                <constraint firstItem="UCE-YR-Zea" firstAttribute="top" secondItem="XwZ-9I-wpq" secondAttribute="bottom" constant="31" id="Xdd-Ir-Aje"/>
+                                <constraint firstItem="aDP-Ai-vwp" firstAttribute="top" secondItem="btx-0L-BYA" secondAttribute="bottom" constant="30" id="bqh-zD-0C4"/>
+                                <constraint firstItem="XwZ-9I-wpq" firstAttribute="top" secondItem="aDP-Ai-vwp" secondAttribute="bottom" constant="40" id="cs2-5h-wMM"/>
+                                <constraint firstItem="UCE-YR-Zea" firstAttribute="centerY" secondItem="0V8-Cn-OOe" secondAttribute="centerY" id="ejS-ww-AIN"/>
+                                <constraint firstItem="UCE-YR-Zea" firstAttribute="trailing" secondItem="XwZ-9I-wpq" secondAttribute="trailing" id="ton-eF-ho1"/>
+                                <constraint firstItem="btx-0L-BYA" firstAttribute="top" secondItem="AAb-12-9WX" secondAttribute="top" constant="50" id="tq6-1Q-Dxa"/>
+                                <constraint firstItem="4WJ-o9-CH3" firstAttribute="leading" secondItem="AAb-12-9WX" secondAttribute="leading" constant="25" id="uWQ-zR-lFC"/>
+                                <constraint firstItem="0V8-Cn-OOe" firstAttribute="leading" secondItem="AAb-12-9WX" secondAttribute="leading" constant="25" id="vkY-u3-vV9"/>
+                                <constraint firstItem="btx-0L-BYA" firstAttribute="centerX" secondItem="AAb-12-9WX" secondAttribute="centerX" id="zCB-Fa-j38"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AAb-12-9WX" secondAttribute="bottom" id="Bsz-w9-zHf"/>
+                        <constraint firstAttribute="trailing" secondItem="AAb-12-9WX" secondAttribute="trailing" id="Sy8-WQ-vvP"/>
+                        <constraint firstItem="AAb-12-9WX" firstAttribute="top" secondItem="SoI-vC-rjo" secondAttribute="top" id="Wsg-dN-KtM"/>
+                        <constraint firstItem="AAb-12-9WX" firstAttribute="leading" secondItem="SoI-vC-rjo" secondAttribute="leading" id="op2-FO-HzW"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="AAb-12-9WX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="BLe-H7-qdC"/>
+                <constraint firstItem="AAb-12-9WX" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="IPp-Er-4aL"/>
+                <constraint firstAttribute="bottom" secondItem="SoI-vC-rjo" secondAttribute="bottom" id="YLR-QN-aLk"/>
+                <constraint firstAttribute="trailing" secondItem="SoI-vC-rjo" secondAttribute="trailing" id="gFm-x5-pVZ"/>
+                <constraint firstItem="SoI-vC-rjo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kb8-Ys-NXR"/>
+                <constraint firstItem="SoI-vC-rjo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nj5-sv-E0J"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_down_arrow.png" width="50" height="50"/>
+    </resources>
+</document>
