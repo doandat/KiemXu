@@ -1,0 +1,6 @@
+framework module Pods_KiemXuDoiThuong {
+  umbrella header "Pods-KiemXuDoiThuong-umbrella.h"
+
+  export *
+  module * { export * }
+}

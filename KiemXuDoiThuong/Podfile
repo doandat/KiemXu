@@ -1,0 +1,38 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'KiemXuDoiThuong' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for KiemXuDoiThuong
+
+    #lib FacebookSDK Swift
+	pod 'FacebookCore'
+	pod 'FacebookLogin'
+	pod 'FacebookShare'
+	
+    #lib SWWebImage
+	pod 'SDWebImage', '~>3.8'
+
+    #lib Alamofire
+    pod 'Alamofire'
+    pod 'AlamofireObjectMapper'
+
+    #lib SwiftyJSON
+    pod 'SwiftyJSON'
+    
+    #lib SVProgressHUD
+    pod 'SVProgressHUD'
+
+    #lib SVPullToRefresh
+    pod 'SVPullToRefresh'
+
+    pod 'Pollfish'
+
+    #lib DropDown
+    pod 'DropDown'
+
+    pod 'SupersonicSDK','~>6.4.17.0'
+
+end
